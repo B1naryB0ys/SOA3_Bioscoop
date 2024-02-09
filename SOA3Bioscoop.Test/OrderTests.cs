@@ -33,21 +33,7 @@ public class OrderTests
     }
 
     [Fact]
-    // 3. Test a order with 3 tickets (10 euro each), ordered by a student, on a weekend
-    public void CalculatePrice_ShouldApplyStudentDiscountAndGroupDiscount_ForStudentOrderInWeekendForSixTickets()
-    {
-        // Arrange
-        Order order = CreateFakeOrder(false, true, true, 10, 6);
-
-        // Act
-        decimal price = order.CalculatePrice();
-
-        // Assert
-        Assert.Equal(27, price);
-    }
-
-    [Fact]
-    // 4. Test a order with 3 PREMIUM tickets (10 euro each), ordered by a student, on a weekend
+    // 3. Test a order with 3 PREMIUM tickets (10 euro each), ordered by a student, on a weekend
     public void CalculatePrice_ShouldApplyStudentDiscountAndPremiumDiscount_ForStudentOrderInWeekendForThreePremiumTickets()
     {
         // Arrange
@@ -61,7 +47,7 @@ public class OrderTests
     }
 
     [Fact]
-    // 5. Test a order with 3 tickets (10 euro each), not ordered by a student, on a weekday
+    // 4. Test a order with 3 tickets (10 euro each), not ordered by a student, on a weekday
     public void CalculatePrice_ShouldApplyStudentDiscount_ForNonStudentOrderInWeekdayForThreeTickets()
     {
         // Arrange
@@ -75,7 +61,7 @@ public class OrderTests
     }
 
     [Fact]
-    // 6. Test a order with 3 tickets (10 euro each), not ordered by a student, on a weekend
+    // 5. Test a order with 3 tickets (10 euro each), not ordered by a student, on a weekend
     public void CalculatePrice_ShouldNotApplyWeekendDiscount_ForNonStudentOrderInWeekendForThreeTickets()
     {
         // Arrange
