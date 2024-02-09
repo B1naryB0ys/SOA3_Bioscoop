@@ -57,9 +57,12 @@ public class Order
                 }
             }
 
-            if (isWeekend && !IsStudentOrder && Tickets.Count >= 6)
-            {
-                ticketPrice *= 0.9m;
+                if(isWeekend && !IsStudentOrder && Tickets.Count >= 6)
+                {
+                    ticketPrice *= 0.9m;
+                }
+
+                totalPrice += ticketPrice;
             }
 
             totalPrice += ticketPrice;
