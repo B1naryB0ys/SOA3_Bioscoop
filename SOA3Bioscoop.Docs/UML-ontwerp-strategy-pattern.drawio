@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-09T11:38:39.515Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 OPR/106.0.0.0" etag="BVp8OPSlZBVQH3nvQwxP" version="23.1.2" type="device">
+<mxfile host="app.diagrams.net" modified="2024-02-09T12:38:41.107Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 OPR/106.0.0.0" etag="6_2U4gBroTkCAt-eN9hZ" version="23.1.2" type="device">
   <diagram name="Pagina-1" id="U_jNc_FZuAALlaXXZ3Iq">
     <mxGraphModel dx="3395" dy="2117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -76,7 +76,7 @@
           <mxGeometry x="-460" y="150" width="280" height="160" as="geometry" />
         </mxCell>
         <mxCell id="fK8WGxgtLyPAO6y16H-V-13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;TicketExportFormat&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;PLAINTEXT&lt;br&gt;JSON&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-380" y="-70" width="120" height="100" as="geometry" />
+          <mxGeometry x="-380" y="-10" width="120" height="100" as="geometry" />
         </mxCell>
         <mxCell id="fK8WGxgtLyPAO6y16H-V-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" target="fK8WGxgtLyPAO6y16H-V-19">
           <mxGeometry relative="1" as="geometry">
@@ -96,11 +96,11 @@
         <mxCell id="fK8WGxgtLyPAO6y16H-V-17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FreeTicketStrategy&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-640" y="690" width="280" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="fK8WGxgtLyPAO6y16H-V-18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;GroupDiscountStrategy&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-270" y="690" width="280" height="50" as="geometry" />
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;GroupDiscountStrategy&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- discountPercentage: decimal&lt;br&gt;- groupThreshold: int&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-270" y="690" width="280" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="fK8WGxgtLyPAO6y16H-V-19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PremiumDiscountStrategy&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-970" y="690" width="280" height="50" as="geometry" />
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PremiumDiscountStrategy&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- studentPremiumSeatFee: decimal&lt;br&gt;- regularPremiumSeatFee: decimal&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-970" y="690" width="280" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fK8WGxgtLyPAO6y16H-V-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
