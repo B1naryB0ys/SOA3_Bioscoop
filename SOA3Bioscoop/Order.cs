@@ -1,3 +1,5 @@
+using SOA3Bioscoop.Strategies;
+
 namespace SOA3Bioscoop;
 
 public class Order
@@ -5,11 +7,14 @@ public class Order
     private int OrderNr { get; set; }
     private bool IsStudentOrder { get; set; }
     public List<MovieTicket> Tickets { get; set; } = new();
+    private readonly IEnumerable<IDiscountStrategy> discountStrategies = new List<IDiscountStrategy>();
 
-    public Order(int orderNr, bool isStudentOrder)
+
+    public Order(int orderNr, bool isStudentOrder, IEnumerable<IDiscountStrategy> discountStrategies)
     {
         this.OrderNr = orderNr;
         this.IsStudentOrder = isStudentOrder;
+        this.discountStrategies= discountStrategies;
     }
     public int GetOrderNr()
     {
@@ -19,6 +24,11 @@ public class Order
     public void AddSeatReservation(MovieTicket ticket)
     {
 
+    }
+
+    public bool StudentOrder()
+    {
+        return this.IsStudentOrder;
     }
 
     public void AddTicket(MovieTicket ticket)
@@ -33,41 +43,21 @@ public class Order
 
     public decimal CalculatePrice()
     {
-        decimal totalPrice = 0;
+        decimal total = decimal.Zero;
+
         for (int i = 0; i < Tickets.Count; i++)
         {
-            MovieTicket currentTicket = Tickets[i];
-            DateTime screeningDate = currentTicket.getScreeningData();
+            var ticket = Tickets[i];
+            var ticketPrice = ticket.GetPrice();
 
-            bool isWeekend = IsDateWeekend(currentTicket.getScreeningData());
-            int ticketNumber = i + 1;
+            foreach (var discountStrategy in this.discountStrategies)
+                if (ticketPrice > decimal.Zero)
+                    ticketPrice = discountStrategy.CalculatePriceAfterDiscount(ticketPrice, i + 1, ticket, this);
 
-            decimal ticketPrice = currentTicket.GetPrice();
-
-            if (currentTicket.IsPremiumTicket())
-            {
-                ticketPrice += IsStudentOrder ? 2 : 3;
-            }
-
-            if (IsStudentOrder || !isWeekend)
-            {
-                if (ticketNumber % 2 == 0)
-                {
-                    ticketPrice = 0;
-                }
-            }
-
-                if(isWeekend && !IsStudentOrder && Tickets.Count >= 6)
-                {
-                    ticketPrice *= 0.9m;
-                }
-
-                totalPrice += ticketPrice;
-            }
-
-            totalPrice += ticketPrice;
+            total += ticketPrice;
         }
-        return totalPrice;
+
+        return total;
     }
 
     public void Export(TicketExportFormat format)
@@ -82,11 +72,6 @@ public class Order
             case TicketExportFormat.JSON:
                 break;
         }
-    }
-
-    private bool IsDateWeekend(DateTime date)
-    {
-        return date.DayOfWeek == DayOfWeek.Friday || date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday; ;
     }
 
     public override string ToString()

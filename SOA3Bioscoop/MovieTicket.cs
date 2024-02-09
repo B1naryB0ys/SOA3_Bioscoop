@@ -30,6 +30,12 @@ public class MovieTicket
         return MovieScreening.getScreeningData();
     }
 
+    public bool IsDateWeekend()
+    {
+        DateTime date = getScreeningData();
+        return date.DayOfWeek == DayOfWeek.Friday || date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday; ;
+    }
+
     public override string ToString()
     {
         return $"Ticket voor rij {RowNr}, stoel {SeatNr} (prijs kaartje: {GetPrice()}, Premium: { IsPremiumTicket()})";

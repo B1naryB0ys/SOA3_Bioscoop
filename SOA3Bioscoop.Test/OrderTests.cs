@@ -1,3 +1,5 @@
+using SOA3Bioscoop.Strategies;
+
 namespace SOA3Bioscoop.Test;
 
 public class OrderTests
@@ -78,7 +80,11 @@ public class OrderTests
     {
         DateTime date = isWeekend ? new DateTime(2024, 2, 3) : new DateTime(2024, 2, 6);
         MovieScreening movieScreening = new(movieToTest, date, ticketPrice);
-        Order order = new(1, isStudent);
+        List<IDiscountStrategy> discountStrategies = new ()
+        {
+            new FreeTicketStrategy(), new GroupDiscountStrategy(), new PremiumDiscountStrategy()
+        };
+        Order order = new(1, isStudent, discountStrategies);
         for (int i = 0; i < ticketAmount; i++)
         {
             order.AddTicket(new MovieTicket(movieScreening, 1, 1, premiumSeat));

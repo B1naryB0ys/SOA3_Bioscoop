@@ -4,6 +4,13 @@ public class FreeTicketStrategy : IDiscountStrategy
 {
     public decimal CalculatePriceAfterDiscount(decimal currentPrice, int ticketNumber, MovieTicket ticket, Order order)
     {
-        throw new NotImplementedException();
+        if(order.StudentOrder() || !ticket.IsDateWeekend())
+        {
+            if(ticketNumber % 2 == 0)
+            {
+                return 0;
+            }
+        }
+        return currentPrice;
     }
 }
