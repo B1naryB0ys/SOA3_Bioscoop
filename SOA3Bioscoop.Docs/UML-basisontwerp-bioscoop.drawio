@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" modified="2024-02-09T10:52:50.524Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 OPR/106.0.0.0" etag="Ga5y-eE5nWULpsd70JWP" version="23.1.2" type="device">
+  <diagram name="Pagina-1" id="U_jNc_FZuAALlaXXZ3Iq">
+    <mxGraphModel dx="2466" dy="892" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Movie&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ title: string&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Movie(title: string)&lt;br&gt;+ AddScreening(screening: MovieScreening)&lt;br&gt;+ ToString(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="250" y="610" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="fK8WGxgtLyPAO6y16H-V-2" target="fK8WGxgtLyPAO6y16H-V-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="550" />
+              <mxPoint x="380" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-6" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fK8WGxgtLyPAO6y16H-V-4">
+          <mxGeometry x="-0.2889" relative="1" as="geometry">
+            <mxPoint x="10" y="38" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-7" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;0..*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fK8WGxgtLyPAO6y16H-V-4">
+          <mxGeometry x="-0.2667" relative="1" as="geometry">
+            <mxPoint x="-20" y="-23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;MovieScreening&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- DateAndTime: DateTime&lt;br&gt;- PricePerSeat: decimal&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ MovieScreening(movie: Movie, dateAndTime: DateTime, PricePerSeat: decimal)&lt;br&gt;+ GetPricePerSeat(): decimal&lt;br&gt;+ ToString(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="155" y="390" width="450" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endFill=0;" edge="1" parent="1" source="fK8WGxgtLyPAO6y16H-V-3" target="fK8WGxgtLyPAO6y16H-V-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-8" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;0..*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fK8WGxgtLyPAO6y16H-V-5">
+          <mxGeometry x="-0.5256" y="-2" relative="1" as="geometry">
+            <mxPoint x="-18" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-9" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fK8WGxgtLyPAO6y16H-V-5">
+          <mxGeometry x="-0.226" y="-1" relative="1" as="geometry">
+            <mxPoint x="11" y="29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamondThin;endFill=0;startArrow=open;startFill=0;strokeWidth=1;endSize=20;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="93.75" y="229.94" as="sourcePoint" />
+            <mxPoint x="-180" y="229.94" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-12" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;1..*&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fK8WGxgtLyPAO6y16H-V-11">
+          <mxGeometry x="-0.2749" y="1" relative="1" as="geometry">
+            <mxPoint x="75" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;MovieTicket&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- RowNr: int&lt;br&gt;- SeatNr: int&lt;br&gt;- IsPremium: int&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ MovieScreening(movieScreening: MovieScreening, isPremiumReservation: bool, seatNr: int, rowNr: int)&lt;br&gt;+ IsPremiumTicket(): bool&lt;br&gt;+ GetPrice(): decimal&lt;br&gt;+ ToString(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="93.75" y="150" width="572.5" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="fK8WGxgtLyPAO6y16H-V-10" target="fK8WGxgtLyPAO6y16H-V-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Order&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- OrderNr: Int&lt;br&gt;- IsStudentOrder: bool&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Order(orderNr: int, IsStudentOrder: bool)&lt;br&gt;+ GetOrderNr(): int&lt;br&gt;+ AddSeatReservation(ticket: MovieTicket): void&lt;br&gt;+ CalculatePrice(): decimal&lt;br&gt;+ export(exportFormat: TicketExportFormat): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-460" y="150" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="fK8WGxgtLyPAO6y16H-V-13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;TicketExportFormat&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;PLAINTEXT&lt;br&gt;JSON&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-380" y="400" width="120" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
